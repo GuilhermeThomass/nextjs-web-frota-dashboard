@@ -11,7 +11,7 @@ export default async function SideBar() {
                 <Link href="/">Home</Link>
             </div>
             <div>
-                <Link href="/login" className="m-10"><PiUserCircleGearFill size={64} color="white"/></Link>
+                <Link href="/login" className="m-10"><PiUserCircleGearFill size={64} color="#E72254"/></Link>
             </div>
         </div>
     );

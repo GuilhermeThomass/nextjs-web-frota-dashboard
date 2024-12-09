@@ -16,3 +16,10 @@ export const frota = sqliteTable('frota',{
     unidade_chegada: text(),
     hora_saida: text().default(sql`(current_timestamp)`),
 })
+
+export const todo = sqliteTable('todo_list',{
+    id: int().primaryKey({autoIncrement: true}),
+    unidade: text(),
+    data_hora: text(),
+    descricao: text(),
+})

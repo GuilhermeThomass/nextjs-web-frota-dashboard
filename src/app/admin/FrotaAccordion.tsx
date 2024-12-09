@@ -20,11 +20,11 @@ type FrotaAccordionProps = {
 
 export default function FrotaAccordion({id,carro,placa,hora_saida,unidade_chegada}:FrotaAccordionProps) {
     const onSubmit = (data:any) => {
-        let unidade_chegada = data.unidade_chegada;
-        let unidade_saida = data.unidade_saida;
+        const unidade_chegada = data.unidade_chegada;
+        const unidade_saida = data.unidade_saida;
         setUnidadeFrota(id,unidade_saida,unidade_chegada);
     };
-    const { setValue,register,handleSubmit, formState:{isSubmitting} } = useForm({});
+    const { setValue,register,handleSubmit, formState:{} } = useForm({});
     return(
     <div>
         <Accordion variant="splitted" className="w-[300px]">

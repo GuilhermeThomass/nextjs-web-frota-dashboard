@@ -7,12 +7,12 @@ import { createTodo } from "../lib/actions";
 
 export default function ModalTodo() {
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
-    const { register,handleSubmit, formState:{isSubmitting} } = useForm({});
+    const { register,handleSubmit, formState:{} } = useForm({});
     const onSubmit = (data:any) => {
-        let unidade = data.unidade;
-        let descricao = data.descricao;
-        let date = data.date;
-        let hora = data.hora;
+        const unidade = data.unidade;
+        const descricao = data.descricao;
+        const date = data.date;
+        const hora = data.hora;
         createTodo(unidade,descricao,date,hora);
     };
     return (

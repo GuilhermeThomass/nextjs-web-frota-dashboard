@@ -3,11 +3,7 @@
 import { Button } from "../components/Button";
 import { clearFrota } from "../lib/actions";
 
-type FrotaHeaderProps = {
-
-}
-
-export default function FrotaHeader({}:FrotaHeaderProps) {
+export default function FrotaHeader() {
     return(
         <>
             <h1 className="font-bold text-[24px] text-textcolor">Frota Atual</h1>

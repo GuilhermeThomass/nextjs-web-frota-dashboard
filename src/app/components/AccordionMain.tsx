@@ -4,14 +4,13 @@ import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { Chip } from "@nextui-org/chip";
 
 type AccordionMainProps = {
-    id:number;
     carro: string | null;
     placa: string | null;
     hora_saida: string | null;
     unidade_chegada:string|null;
 }
 
-export default function AccordionMain({id,carro,placa,hora_saida,unidade_chegada}:AccordionMainProps) {
+export default function AccordionMain({carro,placa,hora_saida,unidade_chegada}:AccordionMainProps) {
 
     return(
         <div>

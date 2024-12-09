@@ -6,7 +6,7 @@ import { eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 
 export async function getFrota() {
-    let frota = await db.query.frota.findMany();
+    const frota = await db.query.frota.findMany();
     return frota
 }
 export async function updateFrota(id:number) {
@@ -15,13 +15,13 @@ export async function updateFrota(id:number) {
 }
 export async function setUnidadeFrota(id:number, unidade_saida:string,unidade_chegada:string) {
     const monthNames = ["Jan", "Fev", "Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
-    let objDate = new Date();
-    let day = objDate.getDate();
-    let month = objDate.getMonth();
-    let time = objDate.getHours();
-    let timemin = objDate.getMinutes();
+    const objDate = new Date();
+    const day = objDate.getDate();
+    const month = objDate.getMonth();
+    const time = objDate.getHours();
+    const timemin = objDate.getMinutes();
 
-    let format1 = time+":"+timemin+"h, "+monthNames[month]+" "+day
+    const format1 = time+":"+timemin+"h, "+monthNames[month]+" "+day
 
     await db.update(frota).set({unidade_chegada: unidade_chegada, unidade_saida: unidade_saida, hora_saida: format1}).where(eq(frota.id, id));
     revalidatePath('/')

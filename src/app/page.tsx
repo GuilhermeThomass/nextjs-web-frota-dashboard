@@ -14,7 +14,6 @@ export default async function Home() {
                             return(
                                 <AccordionMain
                                     key={values.id}
-                                    id={values.id}
                                     carro={values.carro}
                                     placa={values.placa}
                                     hora_saida={values.hora_saida}

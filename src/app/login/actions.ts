@@ -6,15 +6,14 @@ import { redirect } from "next/navigation";
 
 const testUser = {
   id: "1",
-  email: "claudio@prosaude.com",
-  password: "12345678",
+  email: "claudio",
+  password: "pro@@2024",
 };
 
 const loginSchema = z.object({
-  email: z.string().email({ message: "Email Invalido" }).trim(),
+  email: z.string().trim(),
   password: z
     .string()
-    .min(8, { message: "Password must be at least 8 characters" })
     .trim(),
 });
 

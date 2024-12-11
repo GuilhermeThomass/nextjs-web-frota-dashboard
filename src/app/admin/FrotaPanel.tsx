@@ -6,7 +6,7 @@ export default async function FrotaPanel() {
     const frota = await getFrota();
     return(
         <div className="flex flex-col w-full h-full gap-8">
-            <div className="flex flex-row items-center justify-between">
+            <div className="flex flex-row items-center justify-between mx-16">
                 <FrotaHeader/>
             </div>
             <div className="flex flex-wrap text-textcolor gap-8 justify-center overflow-scroll pb-6 pt-1" >

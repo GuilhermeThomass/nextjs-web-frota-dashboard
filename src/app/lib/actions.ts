@@ -1,7 +1,7 @@
 "use server"
 
 import { db } from "@/db"
-import { frota,todo } from "@/db/schema"
+import { frota,reservas,todo } from "@/db/schema"
 import { eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 
@@ -27,7 +27,7 @@ export async function setUnidadeFrota(id:number, unidade_saida:string,unidade_ch
     revalidatePath('/')
 }
 export async function clearFrota() {
-    await db.update(frota).set({hora_saida: null})
+    await db.update(frota).set({hora_saida: null, unidade_saida:null, unidade_chegada:null})
     revalidatePath('/')
 }
 export async function liberaFrota(id:number) {
@@ -53,6 +53,29 @@ export async function createTodo(unidade:string, descricao:string, data:string,h
     revalidatePath('/')
 }
 
+export async function getReservas() {
+    const reservas = await db.query.reservas.findMany();
+    return reservas
+}
+export async function createReservas(carro:string,placa:string,local_saida:string,local_destino:string,data_hora:string,vagas:number) {
+    await db.insert(reservas).values({
+        carro:carro,
+        placa:placa,
+        local_saida:local_saida,
+        local_destino:local_destino,
+        data_hora:data_hora,
+        vagas:vagas
+    })
+    revalidatePath('/')
+}
+export async function deleteReserva(id:number) {
+    await db.delete(reservas).where(eq(reservas.id, id));
+    revalidatePath('/')
+}
+export async function setVagasReserva(id:number,vagas:number) {
+    await db.update(reservas).set({vagas:vagas}).where(eq(reservas.id, id));
+    revalidatePath('/')
+}
 
 export async function create() {
     console.log("criado")

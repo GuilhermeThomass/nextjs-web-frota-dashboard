@@ -39,10 +39,12 @@ export default function ModalTodo() {
                         <Input
                             aria-label="unidade"
                             classNames={{
-                                input: "text-textcolor"
+                                input: ["text-textcolor ",
+                                    "bg-transparent",
+                                    "placeholder:text-textcolor/50"],
                             }}
                             {...register("unidade")}
-                            color="success"
+                            color="danger"
                             autoFocus
                             placeholder="Entre quem fez o pedido"
                             variant="underlined"
@@ -50,11 +52,13 @@ export default function ModalTodo() {
                         <Input
                             aria-label="descrição"
                             classNames={{
-                                input: "text-textcolor",
+                                input: ["text-textcolor ",
+                                "bg-transparent",
+                                "placeholder:text-textcolor/50"],
 
                             }}
                             {...register("descricao")}
-                            color="success"
+                            color="danger"
                             placeholder="Entre uma descrição"
                             variant="underlined"
                         />
@@ -62,24 +66,26 @@ export default function ModalTodo() {
                             pattern='(?:((?:0[1-9]|1[0-9]|2[0-9])\/(?:0[1-9]|1[0-2])|(?:30)\/(?!02)(?:0[1-9]|1[0-2])|31\/(?:0[13578]|1[02]))\/(?:19|20)[0-9]{2})'
                             arial-label="data"
                             classNames={{
-                                input: "text-textcolor",
-                                label: "text-textcolor"
+                                input: ["text-textcolor ",
+                                    "bg-transparent",
+                                    "placeholder:text-textcolor/50"],
 
                             }}
                             {...register("date")}
-                            color="success"
+                            color="danger"
                             placeholder="DD/MM/AAAA"
                             variant="underlined"
                         />
                         <Input
                             pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]"
-                            arial-label="hora"
+                            arial-label="danger"
                             classNames={{
-                                input: "text-textcolor",
-                                label: "text-textcolor"
+                                input: ["text-textcolor ",
+                                    "bg-transparent",
+                                    "placeholder:text-textcolor/50"],
                             }}
                             {...register("hora")}
-                            color="success"
+                            color="danger"
                             placeholder="00:00"
                             variant="underlined"
                         />

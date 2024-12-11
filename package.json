@@ -16,6 +16,7 @@
     "@nextui-org/input": "^2.2.5",
     "@nextui-org/modal": "^2.0.41",
     "@nextui-org/react": "^2.4.8",
+    "@nextui-org/select": "^2.4.6",
     "@nextui-org/spinner": "^2.0.34",
     "@nextui-org/tooltip": "^2.2.4",
     "dotenv": "^16.4.6",

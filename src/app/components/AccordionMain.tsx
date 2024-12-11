@@ -16,9 +16,10 @@ export default function AccordionMain({carro,placa,hora_saida,unidade_chegada}:A
         <div>
             <Accordion variant="splitted" className="w-[300px]">
             <AccordionItem
+                hideIndicator={true}
                 isDisabled={hora_saida == null? true : false}
                 textValue="frota"
-                className="bg-background w-[300px]"
+                className="bg-background w-[300px] "
                 title={
                     <div>
                         <div className="flex flex-row justify-between text-textcolor font-semibold text-[16px]">
@@ -42,9 +43,11 @@ export default function AccordionMain({carro,placa,hora_saida,unidade_chegada}:A
                         </div>
                     </div>
                 }>
-                <div>
-                    <p>Indo para</p>
-                    <div className="border-2 border-[#B4B4B4] px-4 py-2 rounded-full my-2">{unidade_chegada}</div>
+                <div className="pb-2">
+                        <p className="text-[#B4B4B4] h-6 text-[14px]">
+                            Indo para
+                        </p>
+                        <Chip size="md" className="bg-background border-2 border-[#B4B4B4] min-w-full text-[#B4B4B4]">{unidade_chegada}</Chip>
                 </div>
             </AccordionItem>
         </Accordion>

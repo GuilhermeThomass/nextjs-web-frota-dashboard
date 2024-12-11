@@ -29,6 +29,7 @@ export default function FrotaAccordion({id,carro,placa,hora_saida,unidade_chegad
     <div>
         <Accordion variant="splitted" className="w-[300px]">
             <AccordionItem
+                hideIndicator={true}
                 textValue="frota"
                 className="bg-background w-[300px]"
                 title={
@@ -55,10 +56,12 @@ export default function FrotaAccordion({id,carro,placa,hora_saida,unidade_chegad
                     </div>
                 }>
                 {hora_saida != null &&
-                    <div className="flex flex-col justify-start">
+                    <div className="flex flex-col justify-start gap-4">
                         <div>
-                            <p>Indo para</p>
-                            <div className="border-2 border-[#B4B4B4] px-4 py-2 rounded-full my-2">{unidade_chegada}</div>
+                            <p className="text-[#B4B4B4] h-6 text-[14px]">
+                                Indo para
+                            </p>
+                            <Chip size="md" className="bg-background border-2 border-[#B4B4B4] min-w-full text-[#B4B4B4]">{unidade_chegada}</Chip>
                         </div>
                         <div className="flex justify-end">
                             <Button variant="primary" size="md" onClick={()=>{liberaFrota(id)}}>Liberar</Button>
@@ -66,10 +69,10 @@ export default function FrotaAccordion({id,carro,placa,hora_saida,unidade_chegad
                     </div>}
                 {hora_saida == null &&
                     <form className="flex flex-col gap-2 items-end w-full" onSubmit={handleSubmit(onSubmit)}>
-                        <Input className="h-10" type="text" label="Saida "{...register("unidade_saida")}/>
-                        <Input className="h-10" color="default" type="text" label="Chegada" {...register("unidade_chegada")}/>
+                        <Input variant="bordered" className="h-10" type="text" label="Saida "{...register("unidade_saida")}/>
+                        <Input variant="bordered" className="h-10" color="default" type="text" label="Chegada" {...register("unidade_chegada")}/>
                         <div>
-                            <Button variant="primary" size="md" type="submit" onClick={()=>setValue("id",id)}>Reservar</Button>
+                            <Button variant="primary" size="md" type="submit" onClick={()=>setValue("id",id)}>Ocupar</Button>
                         </div>
                     </form>}
             </AccordionItem>

@@ -9,8 +9,9 @@ export default async function SideBar() {
             <div className="flex gap-20 flex-col text-[30px]">
                 <Image src={Logo} alt="Logo do Pró-saúde" priority={false}/>
                 <Link href="/">Home</Link>
+                <Link href="/reservas">Reservas</Link>
             </div>
-            <div>
+            <div className="w-fit">
                 <Link href="/login" className="m-10"><PiUserCircleGearFill size={64} color="#E72254"/></Link>
             </div>
         </div>

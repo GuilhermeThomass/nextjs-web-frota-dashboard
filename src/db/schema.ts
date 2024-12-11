@@ -16,6 +16,15 @@ export const frota = sqliteTable('frota',{
     unidade_chegada: text(),
     hora_saida: text().default(sql`(current_timestamp)`),
 })
+export const reservas = sqliteTable('reservas',{
+    id: int().primaryKey({autoIncrement: true}),
+    carro: text(),
+    placa: text(),
+    local_saida: text(),
+    local_destino: text(),
+    data_hora: text(),
+    vagas: int()
+})
 
 export const todo = sqliteTable('todo_list',{
     id: int().primaryKey({autoIncrement: true}),

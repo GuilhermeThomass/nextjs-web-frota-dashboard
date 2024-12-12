@@ -1,9 +1,11 @@
 'use server'
 import { getReservas } from "../lib/actions";
 import ReservaAccordion from "../admin/ReservaAccordion";
+import { cookies } from "next/headers";
 
 
 export default async function Reservas() {
+    (await cookies()).get('session')
     const reservas = await getReservas();
     return (
         <div className="flex w-full h-full py-[28px] px-[32px]">

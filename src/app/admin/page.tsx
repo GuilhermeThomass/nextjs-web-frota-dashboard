@@ -1,8 +1,10 @@
 import TodoList from "./TodoList";
 import FrotaPanel from "./FrotaPanel";
 import ReservaList from "./ReservaList";
+import { cookies } from "next/headers";
 
 export default function Admin() {
+    const cookiesStore = cookies();
     return (
       <div className="flex flex-row my-[28px] mx-[24px] gap-4">
         <div className="flex bg-foreground w-[60vw] rounded-[30px] px-[28px] py-[24px]">

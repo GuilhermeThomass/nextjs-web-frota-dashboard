@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@libsql/client": "^0.14.0",
+    "@libsql/client": "^0.3.2",
     "@next/env": "^15.0.3",
     "@nextui-org/accordion": "^2.0.40",
     "@nextui-org/chip": "^2.0.33",

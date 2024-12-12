@@ -8,9 +8,9 @@ import Image from "next/image";
 import Logo from "../../../public/Logo pro.svg"
 
 export function LoginForm() {
-  const [state, loginAction] = useActionState(login, undefined);
+    const [state, loginAction] = useActionState(login, undefined);
 
-  return (
+    return (
     <div className="flex flex-col gap-10 items-center">
         <Image src={Logo} alt="Logo do Pró-saúde" priority={false}/>
         <form action={loginAction} className="flex w-[450px] flex-col gap-4">

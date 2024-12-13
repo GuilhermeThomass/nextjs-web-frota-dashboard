@@ -10,6 +10,7 @@ export default async function SideBar() {
                 <Image src={Logo} alt="Logo do Pró-saúde" priority={false}/>
                 <Link href="/">Home</Link>
                 <Link href="/reservas">Reservas</Link>
+                <Link href="/frota">Frota</Link>
             </div>
             <div className="w-fit">
                 <Link href="/login" className="m-10"><PiUserCircleGearFill size={64} color="#E72254"/></Link>

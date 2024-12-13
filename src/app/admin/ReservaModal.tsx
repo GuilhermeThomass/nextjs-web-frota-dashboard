@@ -64,7 +64,6 @@ export default function ReservaModal() {
                               }}
                               {...register("placa")}
                               color="danger"
-                              autoFocus
                               placeholder="Entre a placa"
                               variant="underlined"
                           />
@@ -77,7 +76,6 @@ export default function ReservaModal() {
                               }}
                               {...register("local_saida")}
                               color="danger"
-                              autoFocus
                               placeholder="Entre o local de saida"
                               variant="underlined"
                           />
@@ -90,7 +88,6 @@ export default function ReservaModal() {
                               }}
                               {...register("local_destino")}
                               color="danger"
-                              autoFocus
                               placeholder="Entre o local de destino"
                               variant="underlined"
                           />
@@ -103,7 +100,6 @@ export default function ReservaModal() {
                               }}
                               {...register("data_hora")}
                               color="danger"
-                              autoFocus
                               placeholder="Entre a data e hora de saida"
                               variant="underlined"
                           />
@@ -116,7 +112,6 @@ export default function ReservaModal() {
                               }}
                               {...register("vagas")}
                               color="danger"
-                              autoFocus
                               placeholder="Entre a quantidade de vagas disponiveis"
                               variant="underlined"
                           />

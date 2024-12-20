@@ -1,6 +1,6 @@
 'use server'
 import { getReservas } from "../lib/actions";
-import ReservaAccordion from "../admin/ReservaAccordion";
+import ReservaAccordion from "../admin/Reservas/ReservaAccordion";
 import { cookies } from "next/headers";
 
 

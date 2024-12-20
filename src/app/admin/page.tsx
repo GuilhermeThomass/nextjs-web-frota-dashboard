@@ -1,6 +1,6 @@
-import TodoList from "./TodoList";
-import FrotaPanel from "./FrotaPanel";
-import ReservaList from "./ReservaList";
+import TodoList from "./Todo/TodoList";
+import FrotaPanel from "./Frota/FrotaPanel";
+import ReservaList from "./Reservas/ReservaList";
 
 export const dynamic = "force-dynamic";
 

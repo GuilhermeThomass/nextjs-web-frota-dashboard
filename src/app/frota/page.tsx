@@ -1,7 +1,7 @@
 'use server'
 import { getFrota } from "../lib/actions";
-import AccordionMain from "../components/AccordionMain";
 import { cookies } from "next/headers";
+import AccordionCompound, { AccordionCompoundForm, AccordionCompoundGoingTo, AccordionCompoundHeader } from "../components/AccordionCompound";
 
 
 export default async function Frota() {
@@ -14,13 +14,11 @@ export default async function Frota() {
                     {
                         frota.map((values)=>{
                             return(
-                                <AccordionMain
+                                <AccordionCompound
                                     key={values.id}
-                                    carro={values.carro}
-                                    placa={values.placa}
-                                    hora_saida={values.hora_saida}
-                                    unidade_chegada={values.unidade_chegada}
-
+                                    data={values}
+                                    header={<AccordionCompoundHeader/>}
+                                    content={<AccordionCompoundGoingTo/>}
                                 />
                             )
                         })

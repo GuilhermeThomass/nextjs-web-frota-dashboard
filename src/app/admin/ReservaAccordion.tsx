@@ -28,11 +28,11 @@ export default function ReservaAccordion({variant,id,vagas,carro,placa,hora,loca
     const { setValue,register,handleSubmit, formState:{} } = useForm({});
     return(
     <div>
-        <Accordion variant="splitted" className="">
+        <Accordion variant="splitted">
             <AccordionItem
                 hideIndicator={true}
                 textValue="frota"
-                className="bg-background w-[340px]"
+                className="bg-background w-[340px] max-sm:w-[280px]"
                 title={
                     <div>
                         <div className="flex flex-row justify-between text-textcolor font-semibold text-[16px]">

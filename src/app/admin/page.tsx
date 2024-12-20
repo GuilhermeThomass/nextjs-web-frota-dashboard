@@ -14,7 +14,7 @@ export default function Admin() {
             <div className="min-h-[37vh]">
                 <TodoList/>
             </div>
-            <div className="min-h-[53vh]">
+            <div className="min-h-[56vh]">
                 <ReservaList/>
             </div>
         </div>

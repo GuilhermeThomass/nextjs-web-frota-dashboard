@@ -14,7 +14,7 @@ export default function AccordionMain({carro,placa,hora_saida,unidade_chegada}:A
 
     return(
         <div>
-            <Accordion variant="splitted" className="w-[300px]">
+            <Accordion variant="splitted">
             <AccordionItem
                 hideIndicator={true}
                 isDisabled={hora_saida == null? true : false}

@@ -9,7 +9,7 @@ export default async function FrotaPanel() {
             <div className="flex flex-row items-center justify-between mx-16">
                 <FrotaHeader/>
             </div>
-            <div className="flex flex-wrap text-textcolor gap-8 justify-center overflow-scroll pb-6 pt-1" >
+            <div className="flex flex-wrap text-textcolor gap-8 justify-center overflow-y-scroll pb-6 pt-1" >
                 {
                     frota.map((values)=>{
                         return(

@@ -21,12 +21,14 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
+
+    return (
     <html lang="pt-br">
         <body>
             <Providers>
+
                 <div className={`${rubik.className} flex flex-row h-screen w-screen`} >
-                    <SideBar/>
+                    <SideBar />
                     {children}
                 </div>
             </Providers>
